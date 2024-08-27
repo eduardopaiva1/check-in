@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Category from '@/components/Category';
 import FixedProgressBar from '@/components/FixedProgressBar';
+import StackDetails from '@/components/StackDetails';
 
 
 
@@ -48,37 +49,9 @@ const handleStackClick = (stack: string) => {
       </div>
 
       {selectedStack && (
-        <div className="mt-6 p-4 bg-gray-200 rounded-lg shadow max-w-3xl ">
-          <h3 className="text-lg font-semibold">Principais Stacks para {selectedStack}</h3>
-          <ul className="list-disc pl-5 mt-2">
-            {selectedStack === 'Front End' && (
-              <>
-                <li>React</li>
-                <li>Vue</li>
-                <li>Angular</li>
-                <li>Bootstrap</li>
-              </>
-            )}
-            {selectedStack === 'Back End' && (
-              <>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Ruby on Rails</li>
-                <li>Django</li>
-              </>
-            )}
-            {selectedStack === 'Banco de Dados' && (
-              <>
-                <li>MongoDB</li>
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-                <li>SQLite</li>
-              </>
-            )}
-          </ul>
-        </div>
+       <StackDetails stackType={selectedStack} />
       )}
-    </div>
+      </div>
   );
 };
 
