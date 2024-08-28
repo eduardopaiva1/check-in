@@ -10,8 +10,8 @@ const IBMPlexSerif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Horizon",
-  description: "Horizon platform",
+  title: "Brabos",
+  description: "Brabos platform",
   icons: {
     icon: '/icons/logo.svg'
   }
